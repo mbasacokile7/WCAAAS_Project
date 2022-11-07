@@ -1,0 +1,33 @@
+.project-title{
+    padding-top:30px;
+    text-align: center;
+}
+.mate-title .project-title{
+
+    margin-top:20px;
+}
+
+.project-title{
+    margin-right: 20px !importantx;
+}
+
+
+#landing-page{
+    
+    background-color: #01001D;
+    color: whitesmoke;
+    text-align: left !important;
+    
+    text-align: center;
+
+}
+.landing-animation{
+    width: 380px;
+    height: 380px;
+}
+
+#project-implementation{
+    text-align: center;
+    background-color: 3F3B6C! important
+    ;
+}
