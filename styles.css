@@ -28,6 +28,96 @@
 
 #project-implementation{
     text-align: center;
-    background-color: 3F3B6C! important
-    ;
+    background-color: #3F3B6C;
+    color: whitesmoke;
 }
+
+
+/*----------------------About Section----------------------*/ 
+
+#about-section{
+    background-color: #624F82;
+    color: whitesmoke;
+    
+}
+
+.about-title{
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+
+.team-member-heading{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+/* ------------------------------------------------------------------------------ Media Queries -------------------------------------------------------------------------------- */
+
+
+/* smartphones, iPhone, portrait 480x320 phones */ 
+@media (min-width:320px)  {
+
+    .team-image{
+        margin-left:80px;
+    }
+
+    .about-text{
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+ }
+
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+@media (min-width:481px)  { 
+
+}
+
+
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+@media (min-width:641px)  { 
+
+    .team-image{
+        margin-left:150px;
+    }
+
+
+    .about-text{
+        margin-top: 20px;
+        text-align: justify;
+    }
+
+
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+@media (min-width:961px)  { 
+    .team-image{
+        margin-left:165px;
+    }
+
+    .about-text{
+        margin-top: 20px;
+        text-align: justify;
+    }
+
+
+}
+
+/* hi-res laptops and desktops */ 
+@media (min-width:1281px) {
+
+    .team-image{
+        margin-left:165px;
+    }
+
+    .about-text{
+        margin-top: 20px;
+        text-align: justify;
+    }
+
+
+
+
+ }
