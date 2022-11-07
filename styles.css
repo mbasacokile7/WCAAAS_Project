@@ -1,3 +1,7 @@
+.nav-item{
+    font-family: 'Mukta', sans-serif;
+}
+
 .project-title{
     padding-top:30px;
     text-align: center;
@@ -8,7 +12,9 @@
 }
 
 .project-title{
-    margin-right: 20px !importantx;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-right: 20px !important;
 }
 
 
@@ -16,14 +22,28 @@
     
     background-color: #01001D;
     color: whitesmoke;
-    text-align: left !important;
-    
-    text-align: center;
+    padding-bottom: 30px;
 
 }
+
 .landing-animation{
     width: 380px;
     height: 380px;
+}
+
+.project-title-2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: left !important;
+}
+.landing-text{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.learn-more-btn{
+    background-color: #A3C7D6 !important;
+    padding: 10px;
+    border-radius: 18px;
 }
 
 #project-implementation{
@@ -44,6 +64,8 @@
 .about-title{
     text-align: center;
     padding: 20px 0 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 .team-member-heading{
@@ -65,6 +87,7 @@
     .about-text{
         margin-top: 20px;
         text-align: center;
+        font-family: 'Roboto Mono', monospace;
     }
     
  }
