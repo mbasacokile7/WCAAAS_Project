@@ -31,7 +31,8 @@ function initialise(){
             if (isNaN(height)) {
               height = width / (4 / 3);
             }
-  
+            
+            // Make adjustments to the photo and video stream for different deveices
             video.setAttribute("width", width);
             video.setAttribute("height", height);
             canvas.setAttribute("width", width);
