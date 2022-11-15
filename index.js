@@ -26,26 +26,26 @@ const systemUsers = [
 
     studentNumber: 22213456,
 
-image: ".../images/Users/derbey.jpg" 
+image: "../images/Users/derbey.jpg" 
 },
 
     {name: "Hash",
 
     studentNumber: 22012669,
 
-image: ".../images/Users/hash.jpg"},
+image: "../images/Users/hash.jpg"},
 
     {name: "Mbasa",
 
     studentNumber: 22038192,
 
-image: ".../images/Users/mbasa.jpg" },
+image: "../images/Users/mbasa.jpg" },
 
     {name: "Prince",
 
     studentNumber: 22001527,
 
-image: ".../images/Users/prince.jpg"}
+image: "../images/Users/prince.jpg"}
 
 ];
 
@@ -140,7 +140,7 @@ auth_button.addEventListener("click", async function(){
     const toPredict = tf.browser.fromPixels(canvas).resizeBilinear([224, 224]).expandDims()
 
     // Load the model 
-    const model = await tf.loadLayersModel(".../tfjs_model/model.json");
+    const model = await tf.loadLayersModel("../tfjs_model/model.json");
     prediction = model.predict(toPredict).dataSync();
     let result = tf.argMax(prediction)
     tf.print(result);
