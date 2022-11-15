@@ -9,6 +9,44 @@ let video = document.getElementById("video");
 let canvas = document.getElementById("canvas");
 let photo = document.getElementById("photo");
 let enroll_button = document.getElementById("enroll-btn");
+let auth_button = document.getElementById("authenticate");
+
+
+// Prediction Result Variables
+let prediction = " ";
+let predictionResult = document.querySelector(".prediction_result");
+let userImage = document.querySelector(".userImage");
+let userName = document.querySelector(".user-name");
+let userStudentNum = document.querySelector("user-student-number");
+
+//Create a an array with objects that represent a single user
+
+const systemUsers = [
+    {name: "Derbey",
+
+    studentNumber: 22213456,
+
+image: "/images/Users/derbey.jpg" },
+
+    {name: "Hash",
+
+    studentNumber: 22012669,
+
+image: "/images/Users/hash.jpg"},
+
+    {name: "Mbasa",
+
+    studentNumber: 22038192,
+
+image: "/images/Users/mbasa.jpg" },
+
+    {name: "Prince",
+
+    studentNumber: 22001527,
+
+image: "/images/Users/prince.jpg"}
+
+];
 
 // Initialization Function
 function initialise(){
@@ -93,6 +131,46 @@ function takepicture() {
 // once loading is complete.
 window.addEventListener("load", initialise, false);
 
+//Create an eventlistener to trigger inference when Authenticate button is pressed
+auth_button.addEventListener("click", async function(){
+
+    takepicture();
+
+    const toPredict = tf.browser.fromPixels(canvas).resizeBilinear([224, 224]).expandDims()
+
+    // Load the model 
+    const model = await tf.loadLayersModel("/tfjs_model/model.json");
+    prediction = model.predict(toPredict);
+    console.log(tf.argMax(prediction));
+    //Change the display of the prediction results div
+
+    //predictionResult.style.display = "Flex";
+
+    //Get the MTCNN Model, to do preprocessing
+
+    //await faceapi.loadSsdMobilenetv1Model('/models');
+    //const detections = await faceapi.detectAllFaces(photo);
+
+    // resize the detected boxes in case your displayed image has a different size then the original
+    //const detectionsForSize = await faceapi.resizeResults(detections, { width: photo.width, height: photo.height })
+    // draw them into a canvas
+    //canvas.width = photo.width
+    //canvas.height = photo.height
+    //faceapi.drawDetection(canvas, detectionsForSize, { withScore: true })
+
+    
+
+    //Make predictions
+
+    //Change photo into tensor and reshape into desired size:
+
+    //
+
+});
+
+
+// Load the model 
+//const model = await tf.loadLayersModel("/tfjs_model/model.json");
 
 
 

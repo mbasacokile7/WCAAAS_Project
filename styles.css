@@ -103,6 +103,10 @@
     width: 760px;
   }
 
+  .prediction-result{
+    display: none;
+  }
+
 
 /*----------------------About Section----------------------*/ 
 
