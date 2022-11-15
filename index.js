@@ -8,16 +8,16 @@ let streaming = false;
 let video = document.getElementById("video");
 let canvas = document.getElementById("canvas");
 let photo = document.getElementById("photo");
-let enroll_button = document.getElementById("enroll-btn");
 let auth_button = document.getElementById("authenticate");
+let enroll_button = document.getElementById("click-photo");
 
 
 // Prediction Result Variables
 let prediction = " ";
 let predictionResult = document.querySelector(".prediction_result");
-let userImage = document.querySelector(".userImage");
+let userImage = document.querySelector(".user-image");
 let userName = document.querySelector(".user-name");
-let userStudentNum = document.querySelector("user-student-number");
+let userStudentNum = document.querySelector(".user-student-number");
 
 //Create a an array with objects that represent a single user
 
@@ -26,25 +26,26 @@ const systemUsers = [
 
     studentNumber: 22213456,
 
-image: "/images/Users/derbey.jpg" },
+image: "images/Users/derbey.jpg" 
+},
 
     {name: "Hash",
 
     studentNumber: 22012669,
 
-image: "/images/Users/hash.jpg"},
+image: "images/Users/hash.jpg"},
 
     {name: "Mbasa",
 
     studentNumber: 22038192,
 
-image: "/images/Users/mbasa.jpg" },
+image: "images/Users/mbasa.jpg" },
 
     {name: "Prince",
 
     studentNumber: 22001527,
 
-image: "/images/Users/prince.jpg"}
+image: "images/Users/prince.jpg"}
 
 ];
 
@@ -140,8 +141,15 @@ auth_button.addEventListener("click", async function(){
 
     // Load the model 
     const model = await tf.loadLayersModel("/tfjs_model/model.json");
-    prediction = model.predict(toPredict);
-    console.log(tf.argMax(prediction));
+    prediction = model.predict(toPredict).dataSync();
+    let result = tf.argMax(prediction)
+    tf.print(result);
+    console.log(systemUsers[result.dataSync()].image);
+    userImage.innerHTML = `<img class = "userImage" src = "${systemUsers[result.dataSync()].image}" style="width:200px;height:200px;">`
+    userName.innerHTML = systemUsers[result.dataSync()].name
+    userStudentNum.innerHTML = systemUsers[result.dataSync()].studentNumber
+    
+    
     //Change the display of the prediction results div
 
     //predictionResult.style.display = "Flex";

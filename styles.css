@@ -103,9 +103,12 @@
     width: 760px;
   }
 
-  .prediction-result{
-    display: none;
+  ol li {
+    list-style: none;
   }
+
+
+
 
 
 /*----------------------About Section----------------------*/ 
@@ -134,6 +137,7 @@
     background-color: #A3C7D6;
     color: whitesmoke;
     text-align: center;
+    padding: 20px 0 20px 0;
 }
 
 
