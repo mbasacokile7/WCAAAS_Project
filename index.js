@@ -26,26 +26,26 @@ const systemUsers = [
 
     studentNumber: 22213456,
 
-image: "../images/Users/derbey.jpg" 
+image: "images/Users/derbey.jpg" 
 },
 
     {name: "Hash",
 
     studentNumber: 22012669,
 
-image: "../images/Users/hash.jpg"},
+image: "images/Users/hash.jpg"},
 
     {name: "Mbasa",
 
     studentNumber: 22038192,
 
-image: "../images/Users/mbasa.jpg" },
+image: "images/Users/mbasa.jpg" },
 
     {name: "Prince",
 
     studentNumber: 22001527,
 
-image: "../images/Users/prince.jpg"}
+image: "images/Users/prince.jpg"}
 
 ];
 
