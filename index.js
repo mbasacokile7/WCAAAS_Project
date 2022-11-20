@@ -140,7 +140,7 @@ auth_button.addEventListener("click", async function(){
     const toPredict = tf.browser.fromPixels(canvas).resizeBilinear([224, 224]).expandDims()
 
     // Load the model 
-    const model = await tf.loadLayersModel("model.json");
+    const model = await tf.loadLayersModel("tfjs_model/model.json");
     prediction = model.predict(toPredict).dataSync();
     let result = tf.argMax(prediction)
     tf.print(result);
